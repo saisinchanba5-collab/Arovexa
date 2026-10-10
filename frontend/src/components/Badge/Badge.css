@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Arovexa Reusable Badge Styles
+   ========================================================================== */
+
+.arovexa-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  line-height: 1;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.badge-size-sm {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.badge-size-md {
+  font-size: 0.78rem;
+  padding: 0.3rem 0.65rem;
+}
+
+.badge-size-lg {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.85rem;
+}
+
+.badge-prefix-icon {
+  flex-shrink: 0;
+}
+
+/* Color Variants */
+.badge-lime {
+  background-color: var(--color-primary-lime);
+  color: var(--color-navy);
+}
+
+.badge-teal,
+.badge-ice {
+  background-color: var(--color-ice-blue);
+  color: var(--color-navy);
+  border: 1px solid rgba(20, 43, 58, 0.15);
+}
+
+.badge-navy {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border: 1px solid var(--color-navy);
+}
+
+.badge-mint {
+  background-color: var(--color-mint);
+  color: #1e4b25;
+}
+
+.badge-gold,
+.badge-sand {
+  background-color: var(--color-background);
+  color: var(--color-text-muted);
+  border: 1px solid rgba(20, 43, 58, 0.1);
+}
+
+.badge-success {
+  background-color: var(--color-success-bg);
+  color: var(--color-success-text);
+}
+
+.badge-warning {
+  background-color: var(--color-warning-bg);
+  color: var(--color-warning);
+}
+
+.badge-error {
+  background-color: var(--color-error-bg);
+  color: var(--color-error-text);
+}
+
+.badge-outline {
+  background-color: transparent;
+  color: var(--color-text-muted);
+  border: 1px solid rgba(20, 43, 58, 0.15);
+}
+
+.badge-demo {
+  background-color: rgba(20, 43, 58, 0.06);
+  color: var(--color-text-muted);
+  border: 1px dashed rgba(20, 43, 58, 0.2);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

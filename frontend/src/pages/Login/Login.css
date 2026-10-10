@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Arovexa Login Page Styles
+   ========================================================================== */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background);
+}
+
+.login-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+}
+
+.notice-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+  width: fit-content;
+}

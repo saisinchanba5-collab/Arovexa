@@ -1,0 +1,248 @@
+/* ==========================================================================
+   Arovexa Lab Tests Directory Styles
+   ========================================================================== */
+
+.lab-tests-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.lab-booked-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.25rem;
+  background-color: var(--color-mint);
+  color: #1e4b25;
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.lab-filter-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.category-pills {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.cat-pill {
+  padding: 0.45rem 0.95rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  background-color: var(--color-card);
+  color: var(--color-navy);
+  border: 1px solid rgba(20, 43, 58, 0.12);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.cat-pill:hover {
+  background-color: var(--color-ice-blue);
+}
+
+.cat-pill.active {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border-color: var(--color-navy);
+}
+
+.lab-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 260px;
+}
+
+.lab-search-box .search-icon {
+  position: absolute;
+  left: 10px;
+  color: var(--color-text-muted);
+}
+
+.lab-search-input {
+  width: 100%;
+  padding: 0.45rem 0.75rem 0.45rem 32px;
+  font-size: 0.85rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(20, 43, 58, 0.14);
+  background-color: var(--color-card);
+  outline: none;
+}
+
+.lab-search-input:focus {
+  border-color: var(--color-navy);
+}
+
+/* Lab Tests Grid */
+.lab-tests-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 1.5rem;
+}
+
+.lab-test-card {
+  background-color: var(--color-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(20, 43, 58, 0.08);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.lab-test-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+  border-color: rgba(20, 43, 58, 0.18);
+}
+
+.lab-card-img-wrap {
+  position: relative;
+  height: 160px;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lab-illustration-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.lab-test-card:hover .lab-illustration-svg {
+  transform: scale(1.02);
+}
+
+.lab-category-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  background-color: rgba(20, 43, 58, 0.85);
+  color: var(--color-white);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(4px);
+}
+
+.lab-price-pill {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  background-color: var(--color-primary-lime);
+  color: var(--color-navy);
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Body */
+.lab-test-card-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.lab-card-top-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.lab-test-name {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  line-height: 1.3;
+}
+
+.lab-highlight-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  background-color: var(--color-mint);
+  color: #1e4b25;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.lab-short-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.lab-parameters-box {
+  background-color: var(--color-background);
+  border-radius: var(--radius-md);
+  padding: 0.65rem 0.85rem;
+  font-size: 0.78rem;
+  color: var(--color-navy);
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.lab-meta-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.lab-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.lab-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.85rem;
+  border-top: var(--border-subtle);
+  margin-top: auto;
+}
+
+.sample-type-pill {
+  font-size: 0.74rem;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 600px) {
+  .lab-search-box {
+    width: 100%;
+  }
+
+  .category-pills {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+  }
+}

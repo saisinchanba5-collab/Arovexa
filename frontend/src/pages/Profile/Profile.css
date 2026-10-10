@@ -1,0 +1,143 @@
+/* ==========================================================================
+   Arovexa Patient Profile Page Styles
+   ========================================================================== */
+
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.profile-saved-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.25rem;
+  background-color: var(--color-mint);
+  color: #1e4b25;
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.profile-layout-card {
+  background-color: var(--color-card);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(20, 43, 58, 0.08);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.profile-hero-banner {
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--color-background) 0%, var(--color-ice-blue) 100%);
+  border-bottom: var(--border-subtle);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.profile-avatar-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-navy);
+  color: var(--color-primary-lime);
+  font-size: 1.75rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.profile-hero-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.profile-hero-name-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.profile-hero-name {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--color-navy);
+}
+
+.profile-verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-mint);
+  color: #1e4b25;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.profile-hero-meta {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* Form */
+.profile-form {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-section-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  padding-bottom: 0.5rem;
+  border-bottom: var(--border-subtle);
+}
+
+.profile-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.form-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.profile-actions-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: var(--border-subtle);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.demo-boundary-note {
+  font-size: 0.78rem;
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+@media (max-width: 680px) {
+  .profile-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-hero-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

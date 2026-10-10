@@ -1,0 +1,429 @@
+/* ==========================================================================
+   AROVEXA Hospital Details Modal Styles
+   Modern Premium Healthcare Modal Presentation
+   ========================================================================== */
+
+.hospital-details-modal-container {
+  max-width: 860px !important;
+  border-radius: 20px !important;
+  overflow: hidden;
+}
+
+.hospital-modal-card {
+  position: relative;
+  background-color: var(--color-card, #FFFFFF);
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Close Button (Top-right Corner) */
+.hospital-modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full, 9999px);
+  background-color: rgba(20, 43, 58, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--color-white, #FFFFFF);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  backdrop-filter: blur(4px);
+  transition: all 0.2s ease;
+}
+
+.hospital-modal-close-btn:hover {
+  background-color: var(--color-navy, #142B3A);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
+}
+
+/* 1. Hospital Hero Banner */
+.hospital-modal-hero {
+  position: relative;
+  height: 230px;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--color-navy, #142B3A);
+  flex-shrink: 0;
+}
+
+.hospital-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.65;
+}
+
+.hospital-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20, 43, 58, 0.2) 0%, rgba(20, 43, 58, 0.95) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem 2rem;
+  color: var(--color-white, #FFFFFF);
+}
+
+.hero-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.hospital-type-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.22rem 0.65rem;
+  border-radius: var(--radius-full, 9999px);
+  background-color: var(--color-primary-lime, #D9FF4F);
+  color: var(--color-navy, #142B3A);
+}
+
+.hospital-verified-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.22rem 0.65rem;
+  border-radius: var(--radius-full, 9999px);
+  background-color: rgba(255, 255, 255, 0.18);
+  color: var(--color-white, #FFFFFF);
+  backdrop-filter: blur(4px);
+}
+
+.hospital-hero-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+.hospital-hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+  flex-wrap: wrap;
+}
+
+.hero-rating,
+.hero-location {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.hero-reviews-count {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.meta-dot {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.location-pin {
+  color: var(--color-primary-lime, #D9FF4F);
+}
+
+/* 2. Clean Horizontal Information Strip (Summary) */
+.hospital-summary-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background-color: var(--color-ice-blue, #EAF4FB);
+  border-bottom: 1px solid rgba(20, 43, 58, 0.08);
+  flex-shrink: 0;
+}
+
+.summary-strip-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0.6rem 0.85rem;
+  border-radius: var(--radius-md, 12px);
+  border: 1px solid rgba(20, 43, 58, 0.06);
+}
+
+.strip-icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm, 8px);
+  background-color: var(--color-white, #FFFFFF);
+  color: var(--color-navy, #142B3A);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 5px rgba(20, 43, 58, 0.05);
+}
+
+.strip-text-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.strip-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--color-text-muted, #647D8C);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.strip-val {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--color-navy, #142B3A);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 3. Modal Scrollable Body */
+.hospital-modal-body {
+  padding: 1.75rem 2rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  max-height: calc(88vh - 320px);
+}
+
+.hospital-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.section-header-flex {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.section-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-navy, #142B3A);
+  letter-spacing: -0.01em;
+}
+
+.section-subtext {
+  font-size: 0.78rem;
+  color: var(--color-text-muted, #647D8C);
+  margin-top: 0.1rem;
+}
+
+.doctor-count-badge {
+  font-size: 0.74rem;
+  font-weight: 800;
+  background-color: var(--color-mint, #EAF7D5);
+  color: #1e4b25;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full, 9999px);
+  white-space: nowrap;
+}
+
+.section-text {
+  font-size: 0.9rem;
+  color: #556E7F;
+  line-height: 1.65;
+}
+
+/* 4. Facilities Badges Grid */
+.facilities-badges-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.facility-badge-item {
+  font-size: 0.82rem !important;
+  padding: 0.4rem 0.85rem !important;
+  font-weight: 700 !important;
+}
+
+/* 5. Specialist Physicians List */
+.affiliated-doctors-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.affiliated-doc-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.95rem 1.25rem;
+  border-radius: var(--radius-lg, 16px);
+  background-color: var(--color-background, #F4F7F8);
+  border: 1px solid rgba(20, 43, 58, 0.08);
+  transition: all 0.2s ease;
+}
+
+.affiliated-doc-card:hover {
+  background-color: var(--color-ice-blue, #EAF4FB);
+  border-color: rgba(20, 43, 58, 0.18);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px -2px rgba(20, 43, 58, 0.06);
+}
+
+.doc-card-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.affiliated-doc-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-full, 9999px);
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2.5px solid var(--color-white, #FFFFFF);
+  box-shadow: 0 2px 6px rgba(20, 43, 58, 0.08);
+}
+
+.affiliated-doc-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.affiliated-doc-name {
+  font-size: 0.96rem;
+  font-weight: 800;
+  color: var(--color-navy, #142B3A);
+}
+
+.affiliated-doc-spec {
+  font-size: 0.82rem;
+  color: var(--color-text-muted, #647D8C);
+  font-weight: 600;
+}
+
+.affiliated-doc-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.15rem;
+}
+
+.doc-exp-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-navy, #142B3A);
+  background-color: rgba(20, 43, 58, 0.06);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full, 9999px);
+}
+
+.doc-fee-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #0F766E;
+  background-color: #E6F7F5;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full, 9999px);
+}
+
+.book-slot-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.1rem;
+  font-weight: 700;
+}
+
+/* 6. Footer */
+.hospital-modal-footer {
+  padding: 1rem 2rem;
+  border-top: 1px solid rgba(20, 43, 58, 0.08);
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--color-background, #F4F7F8);
+  flex-shrink: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hospital-summary-strip {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0.85rem 1.25rem;
+  }
+
+  .hospital-modal-hero {
+    height: 200px;
+  }
+
+  .hospital-hero-overlay {
+    padding: 1.25rem;
+  }
+
+  .hospital-modal-body {
+    padding: 1.25rem;
+  }
+
+  .hospital-modal-footer {
+    padding: 0.85rem 1.25rem;
+  }
+
+  .affiliated-doc-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .affiliated-doc-card .book-slot-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hospital-modal-hero {
+    height: 180px;
+  }
+
+  .hospital-hero-title {
+    font-size: 1.25rem;
+  }
+
+  .summary-strip-item {
+    padding: 0.5rem 0.65rem;
+  }
+
+  .strip-icon-box {
+    width: 30px;
+    height: 30px;
+  }
+
+  .strip-val {
+    font-size: 0.76rem;
+  }
+}

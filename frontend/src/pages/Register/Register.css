@@ -1,0 +1,169 @@
+/* ==========================================================================
+   Arovexa Register Page Styles
+   ========================================================================== */
+
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background);
+}
+
+.register-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+}
+
+.auth-card-container {
+  background-color: var(--color-card);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(20, 43, 58, 0.08);
+  box-shadow: var(--shadow-card);
+  max-width: 520px;
+  width: 100%;
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.auth-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.auth-brand-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-navy);
+  color: var(--color-primary-lime);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.85rem;
+}
+
+.auth-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  letter-spacing: -0.01em;
+}
+
+.auth-subtitle {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  margin-top: 0.25rem;
+}
+
+.auth-notice-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  background-color: var(--color-ice-blue);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  font-size: 0.82rem;
+  color: var(--color-navy);
+  border: 1px solid rgba(20, 43, 58, 0.08);
+}
+
+.notice-icon {
+  color: var(--color-navy);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.auth-form-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon .field-icon {
+  position: absolute;
+  left: 12px;
+  color: var(--color-text-muted);
+}
+
+.input-with-icon .form-input {
+  padding-left: 38px;
+  padding-right: 38px;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 12px;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.password-toggle-btn:hover {
+  color: var(--color-navy);
+}
+
+.field-error-msg {
+  color: var(--color-error);
+  font-size: 0.74rem;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+.terms-checkbox-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-top: 3px;
+  accent-color: var(--color-navy);
+}
+
+.auth-card-footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  padding-top: 1rem;
+  border-top: var(--border-subtle);
+}
+
+.auth-switch-link {
+  color: var(--color-navy);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.auth-switch-link:hover {
+  color: var(--color-navy-light);
+}
+
+@media (max-width: 540px) {
+  .auth-card-container {
+    padding: 1.5rem;
+  }
+}

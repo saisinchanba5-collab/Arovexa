@@ -1,0 +1,370 @@
+/* ==========================================================================
+   AROVEXA Global Design System & CSS Foundation
+   Smart Healthcare Management System
+   Official AROVEXA Palette:
+   - Primary Charcoal: #1C1E21 (primary text, major buttons, sidebar, headings)
+   - Charcoal Light: #2A2C30 (hover states, secondary dark surfaces)
+   - Soft Pink: #E9EAE8 (hero cards, soft accents, subtle UI backgrounds)
+   - Muted Rose: #D9AFA9 (AROVEXA brand highlights, selected accents)
+   - Lavender: #B5A6C9 (secondary cards, secondary actions, selected navigation)
+   - Sage Green: #A3B19B (healthcare/success states, verified states)
+   - Warm Neutral: #F5F5F3 (main application background)
+   - White: #FFFFFF (cards, modals, content surfaces)
+   ========================================================================== */
+
+:root {
+  /* AROVEXA Official Core Tokens */
+  --color-primary-charcoal: #1C1E21;
+  --color-charcoal-light: #2A2C30;
+  --color-soft-pink: #E9EAE8;
+  --color-muted-rose: #D9AFA9;
+  --color-lavender: #B5A6C9;
+  --color-sage-green: #A3B19B;
+  --color-warm-neutral: #F5F5F3;
+  --color-white: #FFFFFF;
+
+  /* Semantic Structural Mappings */
+  --color-navy: #1C1E21;           /* Primary Charcoal */
+  --color-navy-dark: #121315;
+  --color-navy-light: #2A2C30;     /* Charcoal Light */
+  --color-navy-muted: rgba(28, 30, 33, 0.7);
+
+  --color-primary-lime: #D9AFA9;   /* Muted Rose for brand accent / highlights */
+  --color-lime: #D9AFA9;
+  --color-lime-hover: #c99e98;
+
+  /* Surfaces */
+  --color-background: #F5F5F3;     /* Warm Neutral */
+  --color-card: #FFFFFF;
+
+  /* Healthcare Accent Tones */
+  --color-ice-blue: #E9EAE8;       /* Soft Pink / Subtle UI background */
+  --color-ice-blue-hover: #dedfdc;
+  --color-mint: #A3B19B;           /* Sage Green */
+  --color-mint-hover: #92a08a;
+  --color-soft-highlight: #E9EAE8;
+  --color-coral-tint: #F3DFDC;
+  --color-coral-text: #8C4037;
+  --color-teal: #758A72;
+
+  /* Typography */
+  --color-text: #1C1E21;           /* Primary Charcoal */
+  --color-text-muted: #5C5E62;
+  --color-text-light: #8E9094;
+  --color-text-inverse: #FFFFFF;
+
+  /* Semantic Feedback */
+  --color-success: #A3B19B;        /* Sage Green */
+  --color-success-bg: #EFF3ED;
+  --color-success-text: #2D3A27;
+  --color-error: #D97777;
+  --color-error-bg: #FDF2F2;
+  --color-error-text: #9E2B2B;
+  --color-warning: #D9A865;
+  --color-warning-bg: #FCF6EC;
+
+  /* Borders & Shadows */
+  --border-subtle: 1px solid rgba(28, 30, 33, 0.08);
+  --border-medium: 1px solid rgba(28, 30, 33, 0.14);
+  --border-strong: 1px solid rgba(28, 30, 33, 0.22);
+  --border-focus: 2px solid #D9AFA9;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 3px rgba(28, 30, 33, 0.04);
+  --shadow-card: 0 4px 16px -2px rgba(28, 30, 33, 0.06);
+  --shadow-hover: 0 8px 24px -4px rgba(28, 30, 33, 0.10);
+  --shadow-elevated: 0 16px 36px -6px rgba(28, 30, 33, 0.14);
+
+  /* Typography Scale */
+  --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Modern Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Accessibility Focus States - Subtle Rose outline */
+:focus-visible {
+  outline: 2px solid var(--color-muted-rose);
+  outline-offset: 2px;
+}
+
+/* Base Elements */
+img, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--color-primary-charcoal);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-charcoal-light);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--color-text);
+}
+
+/* Global Button System */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Primary Button: Primary Charcoal #1C1E21 with white text */
+.btn-primary {
+  background-color: var(--color-primary-charcoal);
+  color: var(--color-white);
+  border: 1px solid transparent;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--color-charcoal-light);
+  color: var(--color-white);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(28, 30, 33, 0.2);
+}
+
+/* Secondary Button: Clean White Card / subtle Charcoal outline */
+.btn-secondary {
+  background-color: var(--color-card);
+  color: var(--color-primary-charcoal);
+  border: 1px solid rgba(28, 30, 33, 0.16);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--color-soft-pink);
+  border-color: rgba(28, 30, 33, 0.28);
+  color: var(--color-primary-charcoal);
+}
+
+/* Charcoal Button */
+.btn-navy {
+  background-color: var(--color-primary-charcoal);
+  color: var(--color-white);
+  border: 1px solid transparent;
+}
+
+.btn-navy:hover:not(:disabled) {
+  background-color: var(--color-charcoal-light);
+  transform: translateY(-1px);
+}
+
+/* Accent Rose Button */
+.btn-accent {
+  background-color: var(--color-muted-rose);
+  color: var(--color-primary-charcoal);
+  border: 1px solid rgba(28, 30, 33, 0.1);
+}
+
+.btn-accent:hover:not(:disabled) {
+  background-color: #cda29b;
+  transform: translateY(-1px);
+}
+
+/* Subtle Soft Pink Button */
+.btn-ice {
+  background-color: var(--color-soft-pink);
+  color: var(--color-primary-charcoal);
+  border: 1px solid rgba(28, 30, 33, 0.08);
+}
+
+.btn-ice:hover:not(:disabled) {
+  background-color: #dfdfdc;
+}
+
+.btn-sm {
+  padding: 0.45rem 0.85rem;
+  font-size: 0.82rem;
+  border-radius: var(--radius-sm);
+}
+
+.btn-lg {
+  padding: 0.85rem 1.65rem;
+  font-size: 1rem;
+  border-radius: var(--radius-lg);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+}
+
+.badge-lime,
+.badge-rose {
+  background-color: rgba(217, 175, 169, 0.25);
+  color: #5A2722;
+}
+
+.badge-ice {
+  background-color: var(--color-soft-pink);
+  color: var(--color-primary-charcoal);
+}
+
+.badge-mint,
+.badge-sage {
+  background-color: rgba(163, 177, 155, 0.25);
+  color: #2D3A27;
+}
+
+.badge-lavender {
+  background-color: rgba(181, 166, 201, 0.28);
+  color: #3B2A52;
+}
+
+.badge-navy,
+.badge-charcoal {
+  background-color: var(--color-primary-charcoal);
+  color: var(--color-white);
+}
+
+.badge-demo {
+  background-color: rgba(28, 30, 33, 0.06);
+  color: var(--color-text-muted);
+  border: 1px dashed rgba(28, 30, 33, 0.18);
+}
+
+.badge-success {
+  background-color: var(--color-success-bg);
+  color: var(--color-success-text);
+}
+
+/* Page Layout Utility Classes */
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--color-primary-charcoal);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.page-subtitle {
+  font-size: 0.98rem;
+  color: var(--color-text-muted);
+  max-width: 680px;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary-charcoal);
+  margin-bottom: 0.45rem;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 0.65rem 0.95rem;
+  font-size: 0.92rem;
+  color: var(--color-primary-charcoal);
+  background-color: var(--color-card);
+  border: 1.5px solid rgba(28, 30, 33, 0.18);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: rgba(28, 30, 33, 0.35);
+  box-shadow: 0 0 0 3px rgba(217, 175, 169, 0.25);
+  outline: none;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--color-text-light);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(28, 30, 33, 0.15);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(28, 30, 33, 0.28);
+}

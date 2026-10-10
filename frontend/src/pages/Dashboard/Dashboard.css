@@ -1,0 +1,843 @@
+/* ==========================================================================
+   Arovexa Dashboard Redesign Styles
+   Approved Step 2 Design System
+   ========================================================================== */
+
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* 1. Welcome Banner */
+.dashboard-welcome-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 1.75rem 2rem;
+  background: linear-gradient(135deg, var(--color-white) 0%, var(--color-ice-blue) 100%);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(20, 43, 58, 0.08);
+  box-shadow: var(--shadow-sm);
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.welcome-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.4rem;
+}
+
+.welcome-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary-lime);
+  color: var(--color-navy);
+}
+
+.demo-notice-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background-color: rgba(20, 43, 58, 0.06);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+}
+
+.welcome-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.welcome-subtitle {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-top: 0.25rem;
+}
+
+/* Sections */
+.dashboard-section-wrap {
+  width: 100%;
+}
+
+/* Carousel 1: Health Summary Cards (Soft Tints) */
+.health-summary-card {
+  border-radius: var(--radius-lg);
+  padding: 1.35rem 1.25rem;
+  border: 1px solid rgba(20, 43, 58, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.health-summary-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+/* Soft variations per requirements */
+.health-summary-card.tint-coral {
+  background-color: var(--color-coral-tint);
+  border-color: rgba(217, 83, 79, 0.15);
+}
+
+.health-summary-card.tint-coral .metric-icon-box {
+  background-color: #ffe4dc;
+  color: #d9534f;
+}
+
+.health-summary-card.tint-ice-blue {
+  background-color: var(--color-ice-blue);
+  border-color: rgba(64, 126, 140, 0.15);
+}
+
+.health-summary-card.tint-ice-blue .metric-icon-box {
+  background-color: #d8edf8;
+  color: var(--color-navy);
+}
+
+.health-summary-card.tint-mint {
+  background-color: var(--color-mint);
+  border-color: rgba(79, 140, 64, 0.15);
+}
+
+.health-summary-card.tint-mint .metric-icon-box {
+  background-color: #daf0bd;
+  color: #276732;
+}
+
+.health-summary-card.tint-soft-highlight {
+  background-color: var(--color-soft-highlight);
+  border-color: rgba(180, 190, 80, 0.2);
+}
+
+.health-summary-card.tint-soft-highlight .metric-icon-box {
+  background-color: #edf3a8;
+  color: #4b5412;
+}
+
+.metric-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.metric-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.metric-demo-tag {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-xs);
+}
+
+.metric-value-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+
+.metric-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  letter-spacing: -0.02em;
+}
+
+.metric-unit {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.metric-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(20, 43, 58, 0.06);
+}
+
+.metric-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.metric-status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.status-ping {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-success);
+}
+
+/* Carousel 2: Upcoming Appointments Card */
+.appointment-carousel-card {
+  background-color: var(--color-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(20, 43, 58, 0.1);
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+  height: 100%;
+}
+
+.appointment-carousel-card:hover {
+  border-color: rgba(20, 43, 58, 0.22);
+  box-shadow: var(--shadow-card);
+}
+
+.apt-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.apt-doctor-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-navy);
+}
+
+.apt-doctor-specialty {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.apt-status-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+}
+
+.badge-lime {
+  background-color: var(--color-primary-lime);
+  color: var(--color-navy);
+}
+
+.badge-mint {
+  background-color: var(--color-mint);
+  color: #1e4b25;
+}
+
+.badge-ice {
+  background-color: var(--color-ice-blue);
+  color: var(--color-navy);
+}
+
+.badge-demo {
+  background-color: rgba(20, 43, 58, 0.08);
+  color: var(--color-text-muted);
+}
+
+.apt-hospital-row,
+.apt-datetime-row {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+.apt-demo-label {
+  margin-left: auto;
+  font-size: 0.65rem;
+  background-color: var(--color-background);
+  padding: 0.1rem 0.4rem;
+  border-radius: var(--radius-xs);
+}
+
+.apt-card-footer {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: var(--border-subtle);
+}
+
+/* 4. Prominent Next Appointment Section (Item 9) */
+.dashboard-next-appointment-section {
+  width: 100%;
+}
+
+.next-apt-card {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-shadow: var(--shadow-card);
+}
+
+.next-apt-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.next-apt-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: var(--color-primary-lime);
+  color: var(--color-navy);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-full);
+}
+
+.next-demo-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-xs);
+}
+
+.next-apt-content-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1.6fr auto;
+  align-items: center;
+  gap: 2rem;
+}
+
+.next-doctor-name {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-white);
+}
+
+.next-doctor-spec {
+  font-size: 0.9rem;
+  color: var(--color-primary-lime);
+  font-weight: 600;
+}
+
+.next-hospital-name {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 0.25rem;
+}
+
+.timing-bubble {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--radius-lg);
+}
+
+.timing-title {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.timing-sub {
+  display: block;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Carousel 3: Healthcare Tips Card (Item 10) */
+.healthcare-tip-card {
+  background-color: var(--color-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(20, 43, 58, 0.08);
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.healthcare-tip-card:hover {
+  border-color: rgba(20, 43, 58, 0.2);
+  transform: translateY(-2px);
+}
+
+.tip-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tip-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-mint);
+  color: #1e4b25;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tip-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  background-color: var(--color-background);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+}
+
+.tip-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-navy);
+}
+
+.tip-summary {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.tip-footer-note {
+  font-size: 0.72rem;
+  color: var(--color-text-light);
+  margin-top: 0.5rem;
+}
+
+/* Carousel 4: AI Health Insights Card (Item 11) */
+.ai-insight-card {
+  background: linear-gradient(145deg, var(--color-card) 0%, var(--color-ice-blue) 100%);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(20, 43, 58, 0.1);
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+}
+
+.ai-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ai-insight-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary-lime);
+  color: var(--color-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-ui-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  background-color: rgba(20, 43, 58, 0.08);
+  color: var(--color-navy);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-full);
+}
+
+.ai-insight-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-navy);
+}
+
+.ai-insight-sub {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.ai-insight-desc {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.ai-insight-disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 0.65rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.72rem;
+  color: var(--color-navy);
+  font-weight: 600;
+  border-left: 3px solid var(--color-navy);
+}
+
+.disclaimer-info-icon {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.ai-card-actions {
+  margin-top: 0.5rem;
+}
+
+/* 7. Explore AROVEXA Services (Item 12) */
+.dashboard-services-section,
+.dashboard-family-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.section-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.section-badge-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-ice-blue);
+  color: var(--color-navy);
+}
+
+.section-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  letter-spacing: -0.01em;
+  margin-top: 0.25rem;
+}
+
+.section-subtitle {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.service-card {
+  background-color: var(--color-card);
+  border: 1px solid rgba(20, 43, 58, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.95rem;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.service-card:hover {
+  background-color: var(--color-ice-blue);
+  border-color: rgba(20, 43, 58, 0.2);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.service-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary-lime);
+  color: var(--color-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.service-meta {
+  flex: 1;
+}
+
+.service-name {
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: var(--color-navy);
+}
+
+.service-desc {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  line-height: 1.3;
+}
+
+.service-arrow {
+  color: var(--color-text-muted);
+  transition: transform var(--transition-fast);
+}
+
+.service-card:hover .service-arrow {
+  transform: translateX(3px);
+  color: var(--color-navy);
+}
+
+/* 8. Family Health Profiles (Item 13) */
+.family-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.family-profiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.family-member-card {
+  background-color: var(--color-card);
+  border: 1px solid rgba(20, 43, 58, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all var(--transition-fast);
+}
+
+.family-member-card.primary-member {
+  border-color: var(--color-navy);
+  background: linear-gradient(135deg, var(--color-card) 0%, var(--color-mint) 100%);
+}
+
+.member-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-navy);
+  color: var(--color-primary-lime);
+  font-size: 0.95rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.member-avatar.sm {
+  width: 36px;
+  height: 36px;
+  font-size: 0.8rem;
+}
+
+.member-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.member-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.member-name {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-navy);
+}
+
+.primary-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  background-color: var(--color-primary-lime);
+  color: var(--color-navy);
+  padding: 0.1rem 0.4rem;
+  border-radius: var(--radius-xs);
+}
+
+.member-relation {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.member-tags {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.25rem;
+}
+
+.member-meta-pill {
+  font-size: 0.7rem;
+  background-color: var(--color-background);
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-xs);
+  color: var(--color-navy);
+  font-weight: 600;
+}
+
+/* Family Modal */
+.family-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(20, 43, 58, 0.55);
+  backdrop-filter: blur(3px);
+  z-index: 110;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.family-modal-card {
+  background-color: var(--color-card);
+  border-radius: var(--radius-xl);
+  max-width: 520px;
+  width: 100%;
+  box-shadow: var(--shadow-elevated);
+  border: 1px solid rgba(20, 43, 58, 0.12);
+  overflow: hidden;
+}
+
+.family-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: var(--border-subtle);
+  background-color: var(--color-background);
+}
+
+.family-modal-header h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-navy);
+}
+
+.family-modal-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal-info-text {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.family-members-detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.family-detail-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+  background-color: var(--color-background);
+}
+
+.family-detail-meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.family-detail-meta strong {
+  font-size: 0.88rem;
+  color: var(--color-navy);
+}
+
+.family-detail-meta span {
+  font-size: 0.76rem;
+  color: var(--color-text-muted);
+}
+
+.family-modal-footer {
+  padding: 1rem 1.5rem;
+  border-top: var(--border-subtle);
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Responsive Styles */
+@media (max-width: 860px) {
+  .next-apt-content-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .next-apt-action-col button {
+    width: 100%;
+  }
+
+  .welcome-actions {
+    width: 100%;
+  }
+
+  .welcome-actions button {
+    width: 100%;
+  }
+}

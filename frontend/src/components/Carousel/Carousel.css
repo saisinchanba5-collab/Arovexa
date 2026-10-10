@@ -1,0 +1,167 @@
+/* ==========================================================================
+   Arovexa Reusable Responsive Carousel Styles
+   ========================================================================== */
+
+.arovexa-carousel-section {
+  position: relative;
+  width: 100%;
+  margin-bottom: 2.25rem;
+  outline: none;
+}
+
+.carousel-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  gap: 1rem;
+}
+
+.carousel-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.carousel-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-mint);
+  color: #1e4b25;
+  margin-bottom: 0.25rem;
+}
+
+.carousel-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  letter-spacing: -0.01em;
+}
+
+.carousel-subtitle {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+}
+
+/* Nav Arrow Buttons */
+.carousel-nav-arrows {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.carousel-arrow-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-card);
+  color: var(--color-navy);
+  border: 1px solid rgba(20, 43, 58, 0.12);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.carousel-arrow-btn:hover {
+  background-color: var(--color-primary-lime);
+  border-color: rgba(20, 43, 58, 0.2);
+  color: var(--color-navy);
+  transform: translateY(-1px);
+}
+
+.carousel-arrow-btn:active {
+  transform: translateY(0);
+}
+
+/* Viewport and Track */
+.carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+  border-radius: var(--radius-lg);
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+  will-change: transform;
+}
+
+.carousel-slide {
+  box-sizing: border-box;
+  padding: 0 0.5rem;
+  flex-shrink: 0;
+}
+
+.carousel-slide-inner {
+  height: 100%;
+}
+
+/* Footer Controls (Dots & Mobile Arrows) */
+.carousel-footer-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.carousel-pagination-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.carousel-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: var(--radius-full);
+  background-color: rgba(20, 43, 58, 0.18);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all var(--transition-normal);
+}
+
+.carousel-dot.active {
+  width: 24px;
+  background-color: var(--color-navy);
+  border-radius: var(--radius-full);
+}
+
+.mobile-arrow {
+  display: none;
+  width: 32px;
+  height: 32px;
+}
+
+/* Responsive Styles */
+@media (max-width: 680px) {
+  .desktop-only-arrows {
+    display: none;
+  }
+
+  .mobile-arrow {
+    display: flex;
+  }
+
+  .carousel-slide {
+    padding: 0 0.25rem;
+  }
+
+  .carousel-title {
+    font-size: 1.15rem;
+  }
+
+  .carousel-subtitle {
+    font-size: 0.82rem;
+  }
+}

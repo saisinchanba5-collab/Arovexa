@@ -1,0 +1,196 @@
+/* ==========================================================================
+   Arovexa Family Health Profiles Page Styles
+   ========================================================================== */
+
+.family-health-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  width: 100%;
+}
+
+.family-notice-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.25rem;
+  background-color: var(--color-mint);
+  color: #1e4b25;
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.family-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.family-card-full {
+  background-color: var(--color-card);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(20, 43, 58, 0.08);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.family-card-full:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+  border-color: rgba(20, 43, 58, 0.2);
+}
+
+.family-card-full.active-selection {
+  border-color: var(--color-navy);
+  background: linear-gradient(145deg, var(--color-card) 0%, var(--color-ice-blue) 100%);
+  box-shadow: 0 4px 16px rgba(20, 43, 58, 0.1);
+}
+
+.family-card-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.member-avatar-lg {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-navy);
+  color: var(--color-primary-lime);
+  font-size: 1.1rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.member-name-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.name-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.member-display-name {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-navy);
+}
+
+.primary-pill {
+  font-size: 0.65rem;
+  font-weight: 700;
+  background-color: var(--color-primary-lime);
+  color: var(--color-navy);
+  padding: 0.1rem 0.45rem;
+  border-radius: var(--radius-xs);
+}
+
+.member-relationship-tag {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.member-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  padding: 0.75rem 0.85rem;
+  background-color: var(--color-background);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(20, 43, 58, 0.06);
+}
+
+.member-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  font-size: 0.68rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+.stat-val {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.family-card-actions {
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.active-member-overview-card {
+  background-color: var(--color-card);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(20, 43, 58, 0.1);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.overview-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.shield-icon {
+  color: #1e4b25;
+  margin-top: 2px;
+}
+
+.overview-header h4 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-navy);
+}
+
+.overview-header p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.overview-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem;
+  background-color: var(--color-background);
+  border-radius: var(--radius-md);
+}
+
+.ov-label {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.ov-val {
+  font-size: 0.9rem;
+  color: var(--color-navy);
+}
